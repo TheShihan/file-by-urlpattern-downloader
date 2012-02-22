@@ -1,0 +1,15 @@
+.DS_Store
+*.tmproj
+tmtags
+*.tmp
+*~
+\#*
+.\#*
+*.swp
+*.log
+*.sql
+*.sqlite
+test_data/**/*
+test_data
+test_data_original/**/*
+test_data_original
