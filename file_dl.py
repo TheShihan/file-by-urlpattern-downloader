@@ -80,7 +80,10 @@ def main():
 def download_file(url, filename):
   print "Downloading file: %s and saving as %s" % (url, filename)
   file = urllib.URLopener()
-  file.retrieve(url, filename)
+  try:
+    file.retrieve(url, filename)
+  except IOError as (errno, strerror):
+    print "Error: could not download file. %s, %s" % (errno, strerror)
 
 if __name__ == "__main__":
   main()
